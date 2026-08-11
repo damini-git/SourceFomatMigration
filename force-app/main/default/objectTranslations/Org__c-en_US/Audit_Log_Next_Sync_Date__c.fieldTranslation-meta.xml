@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- DateTime at which Audit Log Data sync --></help>
+    <label><!-- Audit Log Next Sync Date --></label>
+    <name>Audit_Log_Next_Sync_Date__c</name>
+</CustomFieldTranslation>

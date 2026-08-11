@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Authentication is failed, the fail reason will be displayed here. --></help>
+    <label><!-- Authentication Failure Reason --></label>
+    <name>Authentication_Failure_Reason__c</name>
+</CustomFieldTranslation>

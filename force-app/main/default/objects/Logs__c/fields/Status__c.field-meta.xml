@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activating</fullName>
+                <default>false</default>
+                <label>Activating</label>
+            </value>
+            <value>
+                <fullName>Activation Confirmed</fullName>
+                <default>false</default>
+                <label>Activation Confirmed</label>
+            </value>
+            <value>
+                <fullName>Activation Processing</fullName>
+                <default>false</default>
+                <label>Activation Processing</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Deactivation Confirmed</fullName>
+                <default>false</default>
+                <label>Deactivation Confirmed</label>
+            </value>
+            <value>
+                <fullName>Deactivation Finished</fullName>
+                <default>false</default>
+                <label>Deactivation Finished</label>
+            </value>
+            <value>
+                <fullName>Deleted</fullName>
+                <default>false</default>
+                <label>Deleted</label>
+            </value>
+            <value>
+                <fullName>Deleting</fullName>
+                <default>false</default>
+                <label>Deleting</label>
+            </value>
+            <value>
+                <fullName>Discarding</fullName>
+                <default>false</default>
+                <label>Discarding</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Forbidden</fullName>
+                <default>false</default>
+                <label>Forbidden</label>
+            </value>
+            <value>
+                <fullName>InProgress</fullName>
+                <default>false</default>
+                <label>InProgress</label>
+            </value>
+            <value>
+                <fullName>Locked</fullName>
+                <default>false</default>
+                <label>Locked</label>
+            </value>
+            <value>
+                <fullName>Locking</fullName>
+                <default>false</default>
+                <label>Locking</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Pending Activation</fullName>
+                <default>false</default>
+                <label>Pending Activation</label>
+            </value>
+            <value>
+                <fullName>Pending Remote Creation</fullName>
+                <default>false</default>
+                <label>Pending Remote Creation</label>
+            </value>
+            <value>
+                <fullName>Processing</fullName>
+                <default>false</default>
+                <label>Processing</label>
+            </value>
+            <value>
+                <fullName>Remote Sandbox Created</fullName>
+                <default>false</default>
+                <label>Remote Sandbox Created</label>
+            </value>
+            <value>
+                <fullName>Sampling</fullName>
+                <default>false</default>
+                <label>Sampling</label>
+            </value>
+            <value>
+                <fullName>Stopped</fullName>
+                <default>false</default>
+                <label>Stopped</label>
+            </value>
+            <value>
+                <fullName>Success</fullName>
+                <default>false</default>
+                <label>Success</label>
+            </value>
+            <value>
+                <fullName>Suspended</fullName>
+                <default>false</default>
+                <label>Suspended</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

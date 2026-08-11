@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Log Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Custom Settings - Backup Regeneration</fullName>
+                <default>false</default>
+                <label>Custom Settings - Backup Regeneration</label>
+            </value>
+            <value>
+                <fullName>Custom Settings Restoration - Post Refresh</fullName>
+                <default>false</default>
+                <label>Custom Settings Restoration - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>Custom Settings Retrieve - Template Creation</fullName>
+                <default>false</default>
+                <label>Custom Settings Retrieve - Template Creation</label>
+            </value>
+            <value>
+                <fullName>Data Transformation</fullName>
+                <default>false</default>
+                <label>Data Transformation</label>
+            </value>
+            <value>
+                <fullName>Delete Scheduled Jobs - Post Refresh</fullName>
+                <default>false</default>
+                <label>Delete Scheduled Jobs - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>Deploy - Metadata Restoration</fullName>
+                <default>false</default>
+                <label>Deploy - Metadata Restoration</label>
+            </value>
+            <value>
+                <fullName>Metadata - Backup Regeneration</fullName>
+                <default>false</default>
+                <label>Metadata - Backup Regeneration</label>
+            </value>
+            <value>
+                <fullName>Metadata Retrieve - Template Creation</fullName>
+                <default>false</default>
+                <label>Metadata Retrieve - Template Creation</label>
+            </value>
+            <value>
+                <fullName>Search &amp; Replace - Metadata Transformation</fullName>
+                <default>false</default>
+                <label>Search &amp; Replace - Metadata Transformation</label>
+            </value>
+            <value>
+                <fullName>Re-Authenticate</fullName>
+                <default>false</default>
+                <label>Re-Authenticate</label>
+            </value>
+            <value>
+                <fullName>Sandbox Refresh</fullName>
+                <default>false</default>
+                <label>Sandbox Refresh</label>
+            </value>
+            <value>
+                <fullName>Scheduled Jobs - Backup Regeneration</fullName>
+                <default>false</default>
+                <label>Scheduled Jobs - Backup Regeneration</label>
+            </value>
+            <value>
+                <fullName>Scheduled Jobs Restoration - Post Refresh</fullName>
+                <default>false</default>
+                <label>Scheduled Jobs Restoration - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>Scheduled Jobs Retrieve - Template Creation</fullName>
+                <default>false</default>
+                <label>Scheduled Jobs Retrieve - Template Creation</label>
+            </value>
+            <value>
+                <fullName>User Restoration - Post Refresh</fullName>
+                <default>false</default>
+                <label>User Restoration - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>User Retrieve - Template Creation</fullName>
+                <default>false</default>
+                <label>User Retrieve - Template Creation</label>
+            </value>
+            <value>
+                <fullName>Users - Backup Regeneration</fullName>
+                <default>false</default>
+                <label>Users - Backup Regeneration</label>
+            </value>
+            <value>
+                <fullName>Validate Template</fullName>
+                <default>false</default>
+                <label>Validate Template</label>
+            </value>
+            <value>
+                <fullName>Apex Script - Metadata Transformation</fullName>
+                <default>false</default>
+                <label>Apex Script - Metadata Transformation</label>
+            </value>
+            <value>
+                <fullName>Apex Script Template Creation</fullName>
+                <default>false</default>
+                <label>Apex Script Template Creation</label>
+            </value>
+            <value>
+                <fullName>User Activation - Post Refresh</fullName>
+                <default>false</default>
+                <label>User Activation - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>User Deactivation - Post Refresh</fullName>
+                <default>false</default>
+                <label>User Deactivation - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>User Email Validation - Post Refresh</fullName>
+                <default>false</default>
+                <label>User Email Validation - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>Reset User Password - Post Refresh</fullName>
+                <default>false</default>
+                <label>Reset User Password - Post Refresh</label>
+            </value>
+            <value>
+                <fullName>Suffix - Metadata Transformation</fullName>
+                <default>false</default>
+                <label>Suffix - Metadata Transformation</label>
+            </value>
+            <value>
+                <fullName>Metadata Retrieve - Update Template</fullName>
+                <default>false</default>
+                <label>Metadata Retrieve - Update Template</label>
+            </value>
+            <value>
+                <fullName>User Retrieve - Update Template</fullName>
+                <default>false</default>
+                <label>User Retrieve - Update Template</label>
+            </value>
+            <value>
+                <fullName>Custom Settings Retrieve - Update Template</fullName>
+                <default>false</default>
+                <label>Custom Settings Retrieve - Update Template</label>
+            </value>
+            <value>
+                <fullName>Scheduled Jobs Retrieve - Update Template</fullName>
+                <default>false</default>
+                <label>Scheduled Jobs Retrieve - Update Template</label>
+            </value>
+            <value>
+                <fullName>Apex Script - Update Template</fullName>
+                <default>false</default>
+                <label>Apex Script - Update Template</label>
+            </value>
+            <value>
+                <fullName>Debug</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Debug</label>
+            </value>
+            <value>
+                <fullName>Error</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Error</label>
+            </value>
+            <value>
+                <fullName>Info</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Info</label>
+            </value>
+            <value>
+                <fullName>Warning</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Warning</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

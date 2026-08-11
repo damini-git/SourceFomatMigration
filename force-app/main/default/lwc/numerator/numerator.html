@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Numerator">
+        <p class="slds-text-align_center slds-var-m-vertical_medium">
+            Prior Count: <lightning-formatted-number value={priorCount}></lightning-formatted-number>
+        </p>
+        <p class="slds-text-align_center slds-var-m-vertical_medium">
+            {currentCount}
+        </p>
+        <c-controls
+            onadd={handleIncrement}
+            onsubtract={handleDecrement}
+            onmultiply={handleMultiply}>
+        </c-controls>
+    </lightning-card>
+</template>

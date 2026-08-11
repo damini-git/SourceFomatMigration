@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Log Type --></label>
+    <name>Log_Type__c</name>
+    <picklistValues>
+        <masterLabel>Apex Script - Metadata Transformation</masterLabel>
+        <translation><!-- Apex Script - Metadata Transformation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apex Script - Update Template</masterLabel>
+        <translation><!-- Apex Script - Update Template --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apex Script Template Creation</masterLabel>
+        <translation><!-- Apex Script Template Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Settings - Backup Regeneration</masterLabel>
+        <translation><!-- Custom Settings - Backup Regeneration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Settings Restoration - Post Refresh</masterLabel>
+        <translation><!-- Custom Settings Restoration - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Settings Retrieve - Template Creation</masterLabel>
+        <translation><!-- Custom Settings Retrieve - Template Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Settings Retrieve - Update Template</masterLabel>
+        <translation><!-- Custom Settings Retrieve - Update Template --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Transformation</masterLabel>
+        <translation><!-- Data Transformation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delete Scheduled Jobs - Post Refresh</masterLabel>
+        <translation><!-- Delete Scheduled Jobs - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deploy - Metadata Restoration</masterLabel>
+        <translation><!-- Deploy - Metadata Restoration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metadata - Backup Regeneration</masterLabel>
+        <translation><!-- Metadata - Backup Regeneration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metadata Retrieve - Template Creation</masterLabel>
+        <translation><!-- Metadata Retrieve - Template Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metadata Retrieve - Update Template</masterLabel>
+        <translation><!-- Metadata Retrieve - Update Template --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-Authenticate</masterLabel>
+        <translation><!-- Re-Authenticate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reset User Password - Post Refresh</masterLabel>
+        <translation><!-- Reset User Password - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sandbox Refresh</masterLabel>
+        <translation><!-- Sandbox Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduled Jobs - Backup Regeneration</masterLabel>
+        <translation><!-- Scheduled Jobs - Backup Regeneration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduled Jobs Restoration - Post Refresh</masterLabel>
+        <translation><!-- Scheduled Jobs Restoration - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduled Jobs Retrieve - Template Creation</masterLabel>
+        <translation><!-- Scheduled Jobs Retrieve - Template Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduled Jobs Retrieve - Update Template</masterLabel>
+        <translation><!-- Scheduled Jobs Retrieve - Update Template --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Search &amp; Replace - Metadata Transformation</masterLabel>
+        <translation><!-- Search &amp; Replace - Metadata Transformation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suffix - Metadata Transformation</masterLabel>
+        <translation><!-- Suffix - Metadata Transformation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Activation - Post Refresh</masterLabel>
+        <translation><!-- User Activation - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Deactivation - Post Refresh</masterLabel>
+        <translation><!-- User Deactivation - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Email Validation - Post Refresh</masterLabel>
+        <translation><!-- User Email Validation - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Restoration - Post Refresh</masterLabel>
+        <translation><!-- User Restoration - Post Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Retrieve - Template Creation</masterLabel>
+        <translation><!-- User Retrieve - Template Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Retrieve - Update Template</masterLabel>
+        <translation><!-- User Retrieve - Update Template --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Users - Backup Regeneration</masterLabel>
+        <translation><!-- Users - Backup Regeneration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Validate Template</masterLabel>
+        <translation><!-- Validate Template --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

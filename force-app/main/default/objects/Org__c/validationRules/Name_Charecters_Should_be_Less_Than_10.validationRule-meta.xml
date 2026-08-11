@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_Charecters_Should_be_Less_Than_10</fullName>
+    <active>true</active>
+    <errorConditionFormula>LEN(Name) &gt; 10</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Org Name Should Not be more than 10 Characters.</errorMessage>
+</ValidationRule>

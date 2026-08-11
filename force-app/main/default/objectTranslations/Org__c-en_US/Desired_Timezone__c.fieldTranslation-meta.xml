@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Desired Timezone --></label>
+    <name>Desired_Timezone__c</name>
+    <picklistValues>
+        <masterLabel>Africa/Johannesburg</masterLabel>
+        <translation><!-- Africa/Johannesburg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>America/Chicago</masterLabel>
+        <translation><!-- America/Chicago --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>America/Los_Angeles</masterLabel>
+        <translation><!-- America/Los_Angeles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>America/Mexico_City</masterLabel>
+        <translation><!-- America/Mexico_City --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>America/New_York</masterLabel>
+        <translation><!-- America/New_York --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>America/Phoenix</masterLabel>
+        <translation><!-- America/Phoenix --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Bahrain</masterLabel>
+        <translation><!-- Asia/Bahrain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Dubai</masterLabel>
+        <translation><!-- Asia/Dubai --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Hong_Kong</masterLabel>
+        <translation><!-- Asia/Hong_Kong --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Karachi</masterLabel>
+        <translation><!-- Asia/Karachi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Kolkata</masterLabel>
+        <translation><!-- Asia/Kolkata --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Shanghai</masterLabel>
+        <translation><!-- Asia/Shanghai --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Singapore</masterLabel>
+        <translation><!-- Asia/Singapore --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia/Tokyo</masterLabel>
+        <translation><!-- Asia/Tokyo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Australia/Melbourne</masterLabel>
+        <translation><!-- Australia/Melbourne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Australia/Sydney</masterLabel>
+        <translation><!-- Australia/Sydney --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Europe/Amsterdam</masterLabel>
+        <translation><!-- Europe/Amsterdam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Europe/London</masterLabel>
+        <translation><!-- Europe/London --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Europe/Moscow</masterLabel>
+        <translation><!-- Europe/Moscow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Europe/Prague</masterLabel>
+        <translation><!-- Europe/Prague --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Europe/Stockholm</masterLabel>
+        <translation><!-- Europe/Stockholm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Europe/Vatican</masterLabel>
+        <translation><!-- Europe/Vatican --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

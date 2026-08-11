@@ -1,0 +1,331 @@
+<template>
+    
+    <template if:true={isValidationFailed}>
+        <lightning-card title="Validation Results">
+            <br/>
+
+            
+            <div class="slds-box">
+                <template if:true={showSpinnerValidationSuccess}>
+                    <lightning-spinner alternative-text="Loading Validation Success..." size="medium"></lightning-spinner>
+                </template>
+
+                <template if:true={isValidationSuccess}>
+                    <h1 style="font-size:16px; font-weight: bold;">Component Successes:</h1><br/>
+                    
+                    <!-- Search Box -->
+                    <div class="slds-grid slds-gutters slds-m-bottom_small">
+                        <div class="slds-col slds-size_1-of-3">
+                            <lightning-input type="search" label="Search" onchange={handleSuccessSearch}
+                                value={successSearchTerm}>
+                            </lightning-input>
+                        </div>
+
+                    </div>
+                <template if:true={paginatedSuccessData.length}>   
+                    <div class="datatable-container" style="height: 180px;">
+                        <lightning-datatable key-field="Id" data={paginatedSuccessData}
+                            columns={columnsForValidationResultForSucess} hide-checkbox-column
+                            sorted-by={successSortedBy} sorted-direction={successSortedDirection}
+                            onsort={handleSuccessSort}>
+                        </lightning-datatable>
+                    </div>
+
+                   
+                    <!-- Pagination Controls -->
+                    <div class="slds-grid slds-wrap slds-m-top_medium slds-p-around_x-small">
+                        
+                        <!-- Left: Page Size -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div class="slds-grid slds-gutters slds-align_absolute-left">
+                                <span class="slds-badge" style="padding-top: 8px;">Page Size:</span>
+                                <div class="slds-select_container" style="margin-left: 0.5rem;">
+                                    <select class="slds-select" onchange={handleSuccessRecordsPerPageChange}>
+                                        <template for:each={recordsPerPageOptions} for:item="option">
+                                            <option key={option} value={option}>{option}</option>
+                                        </template>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Center: Pagination Buttons -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12" style="display: flex; justify-content: center;">
+                            <lightning-button-group>
+                                <lightning-button label="First" onclick={handleSuccessFirst} disabled={isSuccessPrevDisabled}></lightning-button>
+                                <lightning-button label="Previous" onclick={handleSuccessPrev} disabled={isSuccessPrevDisabled}></lightning-button>
+                            </lightning-button-group>
+                            <span class="slds-badge" style="margin: 0 0.75rem;">Showing {currentPageSuccess} of {totalPagesSuccess} Page(s)</span>
+                            <lightning-button-group>
+                                <lightning-button label="Next" onclick={handleSuccessNext} disabled={isSuccessNextDisabled}></lightning-button>
+                                <lightning-button label="Last" onclick={handleSuccessLast} disabled={isSuccessNextDisabled}></lightning-button>
+                            </lightning-button-group>
+                        </div>
+
+                        <!-- Right: Total Records -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div style="display: flex; justify-content: flex-end;">
+                                <span class="slds-badge">Total Records: {totalSuccessRecords}</span>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <template if:false={paginatedSuccessData.length}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture slds-align_absolute-center"
+                        style="height: 100px">
+                        <p class="slds-text-heading_small">
+                            No validation success records found.
+                        </p>
+                    </div>
+                </template>  
+                </template>
+
+                <br/><br/>
+                <template if:true={isValidationFailure}>
+                    <h1 style="font-size:16px; font-weight: bold;">Component Errors:</h1><br/>
+                
+                    <!-- Search Box -->
+                    <div class="slds-grid slds-gutters slds-m-bottom_small">
+                        <div class="slds-col slds-size_1-of-3">
+                            <lightning-input type="search" label="Search" onchange={handleFailureSearch}
+                                value={failureSearchTerm}>
+                            </lightning-input>
+                        </div>
+
+                    </div>
+
+                <template if:true={paginatedFailureData.length}>    
+
+                    <div class="datatable-container" style="height: 180px;">
+                        <lightning-datatable key-field="Id" data={paginatedFailureData}
+                            columns={columnsForValidationResultForFailure} hide-checkbox-column 
+                            sorted-by={failureSortedBy} sorted-direction={failureSortedDirection}
+                            onsort={handleFailureSort}>
+                        </lightning-datatable>
+                    </div>
+
+                    <!-- Pagination Controls for Failure Table -->
+                    <div class="slds-grid slds-wrap slds-m-top_medium slds-p-around_x-small">
+                        
+                        <!-- Left: Page Size Dropdown -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div class="slds-grid slds-gutters slds-align_absolute-left">
+                                <span class="slds-badge" style="padding-top: 8px;">Page Size:</span>
+                                <div class="slds-select_container" style="margin-left: 0.5rem;">
+                                    <select class="slds-select" onchange={handleFailureRecordsPerPageChange}>
+                                        <template for:each={recordsPerPageOptions} for:item="option">
+                                            <option key={option} value={option}>
+                                                {option}
+                                            </option>
+                                        </template>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Center: Pagination Navigation -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12" style="display: flex; justify-content: center;">
+                            <lightning-button-group>
+                                <lightning-button label="First" onclick={handleFailureFirst} disabled={isFailurePrevDisabled}></lightning-button>
+                                <lightning-button label="Previous" onclick={handleFailurePrev} disabled={isFailurePrevDisabled}></lightning-button>
+                            </lightning-button-group>
+                            <span class="slds-badge" style="margin: 0 0.75rem;">
+                                Showing {currentPageFailure} of {totalPagesFailure} Page(s)
+                            </span>
+                            <lightning-button-group>
+                                <lightning-button label="Next" onclick={handleFailureNext} disabled={isFailureNextDisabled}></lightning-button>
+                                <lightning-button label="Last" onclick={handleFailureLast} disabled={isFailureNextDisabled}></lightning-button>
+                            </lightning-button-group>
+                        </div>
+
+                        <!-- Right: Total Records -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div style="display: flex; justify-content: flex-end;">
+                                <span class="slds-badge">Total Records: {totalFailureRecords}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </template>    
+
+                <template if:false={paginatedFailureData.length}>
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture slds-align_absolute-center"
+                        style="height: 100px">
+                        <p class="slds-text-heading_small">
+                            No validation error records found.
+                        </p>
+                    </div>
+                </template>
+
+                </template>
+                <br/>
+            </div>
+        </lightning-card>
+    </template>
+
+    <template if:true={isDeploymentFailed}>
+        <lightning-card title="Validation Results">
+            <br/>
+            <div class="slds-box" style="height:50vh; overflow-y: auto;" tabindex="0">
+                <template if:true={showSpinnerDeploySuccess}>
+                    <lightning-spinner alternative-text="Loading Deployment Success..." size="medium"></lightning-spinner>
+                </template>
+                <template if:true={isDeploymentSuccess}>
+                    <h1 style="font-size:16px; font-weight: bold;">Component Successes:</h1><br/>
+                    
+                    <!-- Search Box -->
+                    <div class="slds-grid slds-gutters slds-m-bottom_small">
+                        <div class="slds-col slds-size_1-of-3">
+                            <lightning-input type="search" label="Search" onchange={handleDeploySuccessSearch}
+                                value={deploySuccessSearchTerm}>
+                            </lightning-input>
+                        </div>
+
+                    </div>
+
+                    <template if:true={paginatedDeploySuccessData.length}>
+
+                    <div class="datatable-container" style="height: 180px;">
+                        <lightning-datatable key-field="Id" data={paginatedDeploySuccessData}
+                            columns={columnsForDeploymentResultForSucess} hide-checkbox-column
+                            sorted-by={deploySuccessSortedBy} sorted-direction={deploySuccessSortedDirection}
+                            onsort={handleDeploySuccessSort}>
+                        </lightning-datatable>
+                    </div>
+
+                  <!-- Pagination Controls for Deployment Success Table -->
+                <div class="slds-grid slds-wrap slds-m-top_medium slds-p-around_x-small">
+                    
+                    <!-- Left: Page Size Dropdown -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <div class="slds-grid slds-gutters slds-align_absolute-left">
+                            <span class="slds-badge" style="padding-top: 8px;">Page Size:</span>
+                            <div class="slds-select_container" style="margin-left: 0.5rem;">
+                                <select class="slds-select" onchange={handleDeploySuccessRecordsPerPageChange}>
+                                    <template for:each={recordsPerPageOptions} for:item="option">
+                                        <option key={option} value={option}>
+                                            {option}
+                                        </option>
+                                    </template>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center: Pagination Navigation -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12" style="display: flex; justify-content: center;">
+                        <lightning-button-group>
+                            <lightning-button label="First" onclick={handleDeploySuccessFirst} disabled={isDeploySuccessPrevDisabled}></lightning-button>
+                            <lightning-button label="Previous" onclick={handleDeploySuccessPrev} disabled={isDeploySuccessPrevDisabled}></lightning-button>
+                        </lightning-button-group>
+                        <span class="slds-badge" style="margin: 0 0.75rem;">
+                            Showing {currentPageDeploySuccess} of {totalPagesDeploySuccess} Page(s)
+                        </span>
+                        <lightning-button-group>
+                            <lightning-button label="Next" onclick={handleDeploySuccessNext} disabled={isDeploySuccessNextDisabled}></lightning-button>
+                            <lightning-button label="Last" onclick={handleDeploySuccessLast} disabled={isDeploySuccessNextDisabled}></lightning-button>
+                        </lightning-button-group>
+                    </div>
+
+                    <!-- Right: Total Records -->
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <div style="display: flex; justify-content: flex-end;">
+                            <span class="slds-badge">Total Records: {totalDeploySuccessRecords}</span>
+                        </div>
+                    </div>
+
+                </div>
+            </template>
+            <template if:false={paginatedDeploySuccessData.length}>
+                <div class="slds-box slds-theme_shade slds-theme_alert-texture slds-align_absolute-center"
+                    style="height: 100px">
+                    <p class="slds-text-heading_small">
+                        No Deployment Success records found.
+                    </p>
+                </div>
+            </template>
+
+                </template>
+
+                <br/><br/>
+                <template if:true={isDeploymentFailure}>
+                    <h1 style="font-size:16px; font-weight: bold;">Component Errors:</h1><br/>
+                    
+                    <!-- Search Box -->
+                    <div class="slds-grid slds-gutters slds-m-bottom_small">
+                        <div class="slds-col slds-size_1-of-3">
+                            <lightning-input type="search" label="Search" onchange={handleDeployFailureSearch}
+                                value={deployFailureSearchTerm}>
+                            </lightning-input>
+                        </div>
+
+                    </div>
+                    <template if:true={paginatedDeployFailureData.length}>
+
+                    <div class="datatable-container" style="height: 180px;">
+                        <lightning-datatable key-field="Id" data={paginatedDeployFailureData}
+                            columns={columnsForDeploymentResultForFailure} hide-checkbox-column
+                            sorted-by={deployFailureSortedBy} sorted-direction={deployFailureSortedDirection}
+                            onsort={handleDeployFailureSort}>
+                        </lightning-datatable>
+                    </div>
+
+                   <!-- Pagination Controls for Deployment Failure Table -->
+                    <div class="slds-grid slds-wrap slds-m-top_medium slds-p-around_x-small">
+
+                        <!-- Left: Page Size Dropdown -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div class="slds-grid slds-gutters slds-align_absolute-left">
+                                <span class="slds-badge" style="padding-top: 8px;">Page Size:</span>
+                                <div class="slds-select_container" style="margin-left: 0.5rem;">
+                                    <select class="slds-select" onchange={handleDeployFailureRecordsPerPageChange}>
+                                        <template for:each={recordsPerPageOptions} for:item="option">
+                                            <option key={option} value={option}>
+                                                {option}
+                                            </option>
+                                        </template>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Center: Pagination Navigation -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12" style="display: flex; justify-content: center;">
+                            <lightning-button-group>
+                                <lightning-button label="First" onclick={handleDeployFailureFirst} disabled={isDeployFailurePrevDisabled}></lightning-button>
+                                <lightning-button label="Previous" onclick={handleDeployFailurePrev} disabled={isDeployFailurePrevDisabled}></lightning-button>
+                            </lightning-button-group>
+                            <span class="slds-badge" style="margin: 0 0.75rem;">
+                                Showing {currentPageDeployFailure} of {totalPagesDeployFailure} Page(s)
+                            </span>
+                            <lightning-button-group>
+                                <lightning-button label="Next" onclick={handleDeployFailureNext} disabled={isDeployFailureNextDisabled}></lightning-button>
+                                <lightning-button label="Last" onclick={handleDeployFailureLast} disabled={isDeployFailureNextDisabled}></lightning-button>
+                            </lightning-button-group>
+                        </div>
+
+                        <!-- Right: Total Records -->
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div style="display: flex; justify-content: flex-end;">
+                                <span class="slds-badge">Total Records: {totalDeployFailureRecords}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    </template>
+
+                    <template if:false={paginatedDeployFailureData.length}>
+                        <div class="slds-box slds-theme_shade slds-theme_alert-texture slds-align_absolute-center"
+                                style="height: 100px">
+                                <p class="slds-text-heading_small">
+                                    No Deployment Failure records found.
+                                </p>
+                            </div>
+                    </template>
+
+                </template>
+                <br/>
+            </div>
+        </lightning-card>
+    </template>
+</template>

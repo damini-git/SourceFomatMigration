@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Org</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Orgs</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Production --></label>
+        <name>Production</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sandbox --></label>
+        <name>Sandbox</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Org Name Should Not be more than 10 Characters. --></errorMessage>
+        <name>Name_Charecters_Should_be_Less_Than_10</name>
+    </validationRules>
+</CustomObjectTranslation>

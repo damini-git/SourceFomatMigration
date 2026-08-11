@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Test Run Type --></label>
+    <name>Test_Run_Type__c</name>
+    <picklistValues>
+        <masterLabel>Run All Tests</masterLabel>
+        <translation><!-- Run All Tests --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Run Local Tests</masterLabel>
+        <translation><!-- Run Local Tests --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

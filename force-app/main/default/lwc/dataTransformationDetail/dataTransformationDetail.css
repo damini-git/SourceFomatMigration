@@ -1,0 +1,10 @@
+:host {
+    display: block;
+    box-sizing: border-box;
+}
+
+.inner-content {
+    padding: 2%;
+    border: 1px solid #d8dde6; /* subtle gray border */
+    border-radius: 0.5rem;
+}

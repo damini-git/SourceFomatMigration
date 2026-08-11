@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This holds the last number of audit records for UI display --></help>
+    <label><!-- Audit Log Last Number --></label>
+    <name>Audit_Log_Last_Number__c</name>
+</CustomFieldTranslation>

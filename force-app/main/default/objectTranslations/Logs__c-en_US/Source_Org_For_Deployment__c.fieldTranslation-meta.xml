@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Source Org For Deployment --></label>
+    <name>Source_Org_For_Deployment__c</name>
+    <relationshipLabel><!-- Logs (Source Org For Deployment) --></relationshipLabel>
+</CustomFieldTranslation>

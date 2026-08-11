@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refresh_Template</fullName>
+    <fields>Name</fields>
+    <fields>Source_Org__c</fields>
+    <fields>Last_Validated_Org__c</fields>
+    <fields>Target_Org__c</fields>
+    <fields>Last_Run_Status__c</fields>
+    <fields>Last_Refreshed_By__c</fields>
+    <fields>Last_Refreshed_Date__c</fields>
+    <label>Refresh Template</label>
+</CompactLayout>

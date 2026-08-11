@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checkbox will be enabled till the sync is in progress --></help>
+    <label><!-- Audit Log Syncing --></label>
+    <name>Audit_Log_Syncing__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Custom Setting Names with Record Count --></label>
+    <name>Custom_Setting_Names_with_Record_Count__c</name>
+</CustomFieldTranslation>

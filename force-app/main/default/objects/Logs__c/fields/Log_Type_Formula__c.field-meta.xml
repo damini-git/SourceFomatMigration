@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_Type_Formula__c</fullName>
+    <deprecated>false</deprecated>
+    <formula>OR(ISPICKVAL(Log_Type__c, &quot;Data Transformation&quot;),
+   ISPICKVAL(Log_Type__c, &quot;User Restoration - Post Refresh&quot;),
+   ISPICKVAL(Log_Type__c, &quot;Custom Settings Restoration - Post Refresh&quot;),
+   ISPICKVAL(Log_Type__c, &quot;Search &amp; Replace - Metadata Transformation&quot;),
+   ISPICKVAL(Log_Type__c, &quot;Apex Script - Metadata Transformation&quot;),
+   ISPICKVAL(Log_Type__c, &quot;User Activation - Post Refresh&quot;),
+   ISPICKVAL(Log_Type__c, &quot;User Deactivation - Post Refresh&quot;),
+   ISPICKVAL(Log_Type__c, &quot;User Email Validation - Post Refresh&quot;),
+   ISPICKVAL(Log_Type__c, &quot;Reset User Password - Post Refresh&quot;),
+   ISPICKVAL(Log_Type__c, &quot;Suffix - Metadata Transformation&quot;)
+  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Log Type Formula</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

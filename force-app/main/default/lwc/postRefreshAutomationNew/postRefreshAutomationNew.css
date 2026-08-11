@@ -1,0 +1,536 @@
+.right-aligned-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%; /* Ensures the container uses full width */
+}
+
+.custom-label {
+    font-size: 14px; /* Adjust font size as desired */
+    font-weight: bold;
+    color: #333; /* Label text color */
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 4px; /* Spacing between label and combobox */
+}
+
+.required-asterisk {
+    color: red;
+    margin-right: 4px; /* Space between asterisk and label text */
+}
+
+.banner {
+    background-color: #2775e2; /* Choose your preferred background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding around the banner */
+    text-align: center; /* Center align the text */
+    /*border-radius: 8px;*/ /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.banner-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+
+.type-list {
+    list-style-type: none; /* Remove default bullet for main types */
+    padding-left: 0;
+}
+
+.type-item {
+    margin-bottom: 1rem;
+}
+
+.member-list {
+    list-style-type: disc; /* Use bullet points for members */
+    padding-left: 1.5rem; /* Indent members */
+}
+
+.member-item {
+    margin: 0.2rem 0;
+    color: #333333; /* Set color for better readability */
+}
+
+.exampleHolder{
+    position: relative;
+    display: inline-block;
+    /*width: 80px;
+    height: 80px;*/
+}
+
+/* Additional styling to make strong labels stand out */
+.type-item strong {
+    font-size: 1.1rem;
+    color: #1a73e8; /* Salesforce blue color */
+}
+
+.spinner-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.7);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+/*
+.datatable-container {
+    height: 450px; /* Set a fixed height for the datatable 
+    overflow-y: auto; /* Enable vertical scrolling 
+}*/
+
+.user-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1a73e8;
+}
+
+.user-list {
+    list-style-type: disc; /* Adds bullet points */
+    margin-left: 20px; /* Adds indentation */
+}
+
+.user-item {
+    margin-bottom: 5px; /* Adds space between each user */
+}
+
+.alphabet-filter {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    gap: 4px;
+    flex-wrap: wrap;
+    padding-bottom: 2px;
+}
+
+.alphabet-button {
+    background: none;
+    border: none;
+    color: #0070d2;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 2px 4px;
+}
+
+
+.alphabet-button:hover {
+    text-decoration: none;
+    color: #0056a3;
+}
+
+.alphabet-button.active {
+    font-weight: bold;
+    color: #00418a;
+}
+.search-bar-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 5px; /* Space below the search bar */
+}
+.datatable-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0; /* Ensure no additional space above the table */
+    padding: 0; 
+    overflow-y: auto;
+    height: 350px;
+}
+
+
+
+.data-components-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between sections */
+    padding: 8px; /* Adds padding inside the container */
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.page-info {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.slds-button_icon {
+    margin: 0 5px; /* Add spacing between arrows */
+    font-size: 1.2rem; /* Adjust size if needed */
+}
+
+.pagination-container {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    gap: 0.5rem; /* Adjust spacing between elements */
+}
+
+.pagination-info {
+    font-size: 14px; /* Adjust font size if needed */
+    margin: 0; /* Remove extra margin */
+}
+
+.metadata-container {
+    height: 185px; /* Set a fixed height for the datatable */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.radio-group .slds-radio {
+    margin-bottom: 10px; /* Add spacing between options */
+}
+.radio-group .slds-radio label {
+    font-size: 20px; /* Set the desired font size */
+    font-weight: bold; /* Optional: Make the text bold */
+    color: #333; /* Optional: Adjust the color */
+}
+.metadatatable-container {
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: calc(55vh - 100px); /* Adjust height to leave space for pagination */
+    margin-bottom: 1rem;
+}
+.paginationmetadata-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.help-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.no-data-message {
+    text-align: left;;        /* Centers the text horizontally */
+    margin-top: 20px;          /* Adds some space from the top */
+    font-size: 15px;           /* Adjust font size */
+    color: #171717;               /* Change the text color */
+    font-weight: normal;         /* Makes the text bold */
+    padding-left: 15px;
+}
+/* Remove border between accordion sections */
+.slds-accordion__list {
+    border: none !important;
+}
+
+/* Remove margin between accordion sections */
+.slds-accordion__section {
+    margin-bottom: 0 !important;
+}
+.parent-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Example for full viewport height */
+}
+
+/* Alphabet button styles */
+.alphabet-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.alphabet-button {
+    padding: 4px 8px;
+    border: 1px solid #d8dde6;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    min-width: 32px;
+    text-align: center;
+}
+
+.alphabet-button:hover {
+    background: #f4f6f9;
+}
+
+.alphabet-button.active {
+    background: #0070d2;
+    color: white;
+    border-color: #0070d2;
+}
+
+.alphabet-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* progressPath.css */
+.progress-path-container {
+    width: 100%;
+    margin: -2px;
+}
+
+.progress-path {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+    position: relative;
+}
+
+/* Remove the continuous base line approach */
+/* .progress-path::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: #dddbda;
+    z-index: 1;
+} */
+
+/* Progress step styling */
+[class*="progress-step"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 120px;
+}
+
+.step-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #dddbda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3; /* Ensure circles are above the lines */
+}
+
+[class*="progress-step"].active .step-icon {
+    background-color: #0176d3;
+    border-color: #0176d3;
+}
+
+[class*="progress-step"].completed .step-icon {
+    background-color: #2e844a;
+    border-color: #2e844a;
+}
+
+.empty-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dddbda;
+}
+
+[class*="progress-step"].active .empty-circle {
+    background-color: white;
+}
+
+.step-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #514f4d;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    top: 30px;
+}
+
+[class*="progress-step"].active .step-label,
+[class*="progress-step"].completed .step-label {
+    color: #080707;
+}
+
+/* Refined approach for progress lines */
+[class*="progress-line"] {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #dddbda;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Style for active and completed lines */
+[class*="progress-line"].active {
+    background: linear-gradient(to right, #2e844a 0%, #0176d3 100%);
+}
+
+[class*="progress-line"].completed {
+    background-color: #2e844a;
+}
+
+/* Tooltip Styles */
+.tooltip-container {
+    position: absolute;
+    top: 30px;
+    visibility: hidden;
+}
+
+[class*="progress-step"]:hover .tooltip-container {
+    visibility: visible;
+}
+
+.tooltip {
+    background-color: #16325c;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+    white-space: nowrap;
+    position: relative;
+    top: 15px;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent transparent #16325c transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .progress-path {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 15px;
+    }
+    
+    [class*="progress-step"] {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 24px;
+        align-items: center;
+    }
+    
+    .step-label {
+        position: static;
+        margin-left: 12px;
+        text-align: left;
+    }
+    
+    /* Adjust vertical line segments for mobile */
+    [class*="progress-line"] {
+        width: 2px;
+        height: 24px; /* Height for spacing between steps */
+        margin: 0;
+        position: absolute;
+        left: 12px; /* Center with circles */
+    }
+    
+    /* Position for first vertical line */
+    [class*="progress-line"]:nth-of-type(1) {
+        top: 24px; /* After first circle */
+    }
+    
+    /* Position for second vertical line */
+    [class*="progress-line"]:nth-of-type(2) {
+        top: 72px; /* After second circle */
+    }
+    
+    /* Position for third vertical line */
+    [class*="progress-line"]:nth-of-type(3) {
+        top: 120px; /* After third circle */
+    }
+    
+    .tooltip-container {
+        left: 35px;
+        top: -4px;
+    }
+    
+    .tooltip {
+        top: 0;
+    }
+    
+    .tooltip::after {
+        top: 50%;
+        left: -4px;
+        margin-top: -4px;
+        border-color: transparent #16325c transparent transparent;
+    }
+}
+/* Scriptdetails */
+   .validation-panel {
+        border-left: 4px solid #ffb75d;
+        background-color: #fff4e6;
+        animation: fadeIn 0.3s ease-in;
+    }
+    
+    .error-text {
+        color: #c23934;
+    }
+    
+    .warning-text {
+        color: #ffb75d;
+    }
+    
+    .suggestion-text {
+        color: #0070d2;
+    }
+    
+    .validation-messages {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    .message-group {
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .message-group:last-child {
+        border-bottom: none;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .has-error {
+        border: 1px solid #c23934;
+    }
+    
+    .has-warning {
+        border: 1px solid #ffb75d;
+    }
+    
+    .apex-code-textarea textarea {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        line-height: 1.5;
+    }

@@ -1,0 +1,19 @@
+<apex:page controller="CallbackController" action="{!captureCode}">
+    <script type = "text/javascript">
+    window.onload=function()       
+    {  
+        if (window.opener) {
+                window.opener.postMessage(
+                    { status: 'success', message: 'Authenticated successfully.' },
+                    "*"
+                );
+        }
+        setTimeout(function() {
+            window.close();
+        }, 2000);
+    };
+    </script>
+    <h1 style='font-size:50px'>
+        Authenticated Successfully. You Can Close This Page.
+    </h1>
+</apex:page>

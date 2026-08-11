@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Execution_Time__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+        OR(
+            ISPICKVAL(Log_Type__c, &quot;Custom Settings Restoration - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Data Transformation&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Delete Scheduled Jobs - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Deploy - Metadata Restoration&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Search &amp; Replace - Metadata Transformation&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Sandbox Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Scheduled Jobs Restoration - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;User Restoration - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Apex Script - Metadata Transformation&quot;),
+            ISPICKVAL(Log_Type__c, &quot;User Activation - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;User Deactivation - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;User Email Validation - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Reset User Password - Post Refresh&quot;),
+            ISPICKVAL(Log_Type__c, &quot;Suffix - Metadata Transformation&quot;)
+        ),
+        OR(
+            ISPICKVAL(Status__c, &quot;Completed&quot;),
+            ISPICKVAL(Status__c, &quot;Success&quot;),
+            ISPICKVAL(Status__c, &quot;Failed&quot;)
+        )
+    ),
+    ( Completed_On__c -  Last_Refreshed_Date__c )*1440, 
+    NULL
+)</formula>
+    <label>Execution Time (Min)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
