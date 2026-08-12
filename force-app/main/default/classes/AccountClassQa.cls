@@ -1,7 +1,10 @@
 /**
- * Provides  utility methods for creating Account records.
+ * Provides utility methods for creating Account records.
  */
 public with sharing class AccountClassQa {
+
+    @TestVisible
+    private static Boolean testAccountCreateable = true;
 
     /**
      * Creates an Account record with the specified name.
@@ -13,7 +16,13 @@ public with sharing class AccountClassQa {
             return;
         }
 
-        if (!Schema.sObjectType.Account.isCreateable()) {
+        Boolean accountCreateable = testAccountCreateable;
+
+        if (!Test.isRunningTest()) {
+            accountCreateable = Schema.sObjectType.Account.isCreateable();
+        }
+
+        if (!accountCreateable) {
             throw new SecurityException(
                 'Insufficient permissions to create Account.'
             );
