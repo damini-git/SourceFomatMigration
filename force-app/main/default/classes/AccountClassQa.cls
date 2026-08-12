@@ -3,9 +3,6 @@
  */
 public with sharing class AccountClassQa {
 
-    @TestVisible
-    private static Boolean testAccountCreateable = true;
-
     /**
      * Creates an Account record with the specified name.
      *
@@ -16,13 +13,7 @@ public with sharing class AccountClassQa {
             return;
         }
 
-        Boolean accountCreateable = testAccountCreateable;
-
-        if (!Test.isRunningTest()) {
-            accountCreateable = Schema.sObjectType.Account.isCreateable();
-        }
-
-        if (!accountCreateable) {
+        if (!Schema.sObjectType.Account.isCreateable()) {
             throw new SecurityException(
                 'Insufficient permissions to create Account.'
             );
