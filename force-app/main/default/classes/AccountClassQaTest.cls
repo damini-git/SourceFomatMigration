@@ -2,7 +2,7 @@
 private class AccountClassQaTest {
 
     /**
-     * Tests successful  Account creation.
+     * Tests successful Account creation.
      */
     @IsTest
     static void testCreateAccount() {
