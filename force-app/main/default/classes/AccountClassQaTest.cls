@@ -2,7 +2,7 @@
 private class AccountClassQaTest {
 
     /**
-     * Tests Account creation through AccountClassQa.
+     * Tests  Account creation through AccountClassQa.
      */
     @IsTest
     static void testCreateAccount() {
