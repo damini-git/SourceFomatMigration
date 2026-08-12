@@ -2,55 +2,80 @@
 private class AccountClassQaTest {
 
     /**
-     * Tests  Account creation through AccountClassQa.
+     * Tests successful Account creation.
      */
     @IsTest
     static void testCreateAccount() {
-        Profile profile = [
-            SELECT Id
-            FROM Profile
-            WHERE Name = 'Standard User'
+        Test.startTest();
+
+        AccountClassQa.createAccount('Test Account');
+
+        Test.stopTest();
+
+        Account createdAccount = [
+            SELECT Id, Name
+            FROM Account
+            WHERE Name = 'Test Account'
             LIMIT 1
         ];
 
-        String uniqueUserName =
-            'standarduser' +
-            DateTime.now().getTime() +
-            '@testorg.com';
-
-        User testUser = new User(
-            Alias = 'standt',
-            Email = 'standarduser@testorg.com',
-            EmailEncodingKey = 'UTF-8',
-            LastName = 'Testing',
-            LanguageLocaleKey = 'en_US',
-            LocaleSidKey = 'en_US',
-            ProfileId = profile.Id,
-            TimeZoneSidKey = 'America/Los_Angeles',
-            UserName = uniqueUserName
+        System.assertEquals(
+            'Test Account',
+            createdAccount.Name,
+            'The Account should be created successfully.'
         );
+    }
 
-        insert testUser;
+    /**
+     * Tests that no Account is created when the account name is blank.
+     */
+    @IsTest
+    static void testCreateAccountWithBlankName() {
+        Test.startTest();
 
-        System.runAs(testUser) {
-            Test.startTest();
+        AccountClassQa.createAccount('');
 
-            AccountClassQa.createAccount('Test Account');
+        Test.stopTest();
 
-            Test.stopTest();
+        List<Account> accounts = [
+            SELECT Id
+            FROM Account
+            WHERE Name = ''
+        ];
 
-            Account createdAccount = [
-                SELECT Id, Name
-                FROM Account
-                WHERE Name = 'Test Account'
-                LIMIT 1
-            ];
+        System.assertEquals(
+            0,
+            accounts.size(),
+            'No Account should be created when the name is blank.'
+        );
+    }
 
-            System.assertEquals(
-                'Test Account',
-                createdAccount.Name,
-                'The Account should be created successfully.'
+    /**
+     * Tests the security exception when Account creation is not permitted.
+     */
+    @IsTest
+    static void testCreateAccountWithoutCreatePermission() {
+        AccountClassQa.testAccountCreateable = false;
+
+        Test.startTest();
+
+        try {
+            AccountClassQa.createAccount('Unauthorized Account');
+
+            System.assert(
+                false,
+                'A SecurityException should have been thrown.'
             );
+        } catch (SecurityException securityError) {
+            System.assertEquals(
+                'Insufficient permissions to create Account.',
+                securityError.getMessage(),
+                'The expected security exception should be thrown.'
+            );
+        } finally {
+            AccountClassQa.testAccountCreateable = true;
         }
+
+        Test.stopTest();
     }
 }
