@@ -9,8 +9,9 @@ public with sharing class AccountClassQa {
             throw new SecurityException('Insufficient permissions to create Account.');
         }
 
-        Account accountRecord = new Account();
-        accountRecord.Name = accountName;
+        Account accountRecord = new Account(
+            Name = accountName
+        );
 
         insert accountRecord;
     }
