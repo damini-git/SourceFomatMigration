@@ -1,5 +1,5 @@
 /**
- * Provides utility methods for creating Account records.
+ * Provides  utility methods for creating Account records.
  */
 public with sharing class AccountClassQa {
 
