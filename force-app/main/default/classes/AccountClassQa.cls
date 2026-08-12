@@ -4,7 +4,7 @@
 public with sharing class AccountClassQa {
 
     /**
-     * Creates an Account record  with the specified name.
+     * Creates an Account record with the specified name.
      *
      * @param accountName Name of the Account to create.
      */
