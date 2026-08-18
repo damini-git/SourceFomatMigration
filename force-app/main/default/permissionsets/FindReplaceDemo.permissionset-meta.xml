@@ -4,8 +4,4 @@
     <hasActivationRequired>false</hasActivationRequired>
     <label>FindReplaceDemo</label>
     <license>Salesforce</license>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AcceptInboundBundling</name>
-    </userPermissions>
 </PermissionSet>
