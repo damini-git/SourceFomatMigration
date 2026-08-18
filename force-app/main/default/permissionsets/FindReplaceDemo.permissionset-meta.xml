@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label>FindReplaceDemo</label>
-    <hasActivationRequired>false</hasActivationRequired>
     <description>Testing Find and replace rule in SFP</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>FindReplaceDemo</label>
     <license>Salesforce</license>
     <userPermissions>
         <enabled>true</enabled>
