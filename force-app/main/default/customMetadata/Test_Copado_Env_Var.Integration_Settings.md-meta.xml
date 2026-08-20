@@ -4,7 +4,7 @@
     <protected>false</protected>
     <values>
         <field>API_Endpoint__c</field>
-        <value xsi:type="xsd:string">https://dev1-api.company.com</value>
+        <value xsi:type="xsd:string">{!Environment.Custom Metadata Type}</value>
     </values>
     <values>
         <field>Environment_Name__c</field>
