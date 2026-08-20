@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>FNR_Test_Email_Alert</fullName>
+        <ccEmails>dev1@gmail.com.invalid</ccEmails>
+        <description>FNR Test Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>damini.t@cloudfulcrum.com.sharedcomp.dev</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</template>
+    </alerts>
+</Workflow>
