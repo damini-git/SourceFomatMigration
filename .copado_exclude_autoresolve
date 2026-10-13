@@ -18,3 +18,4 @@
 **/lwc/**
 # Exclude all Layouts
 # **/layouts/*.layout-meta.xml
+**/permissionsets/**
