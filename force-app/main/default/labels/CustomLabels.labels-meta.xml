@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Customer_Tier_Gold_Min</fullName>
+        <categories>US-101</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Tier Gold Minimum</shortDescription>
+        <value>200000</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Tier_Platinum_Min</fullName>
+        <categories>US-101</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Tier Platinum Minimum</shortDescription>
+        <value>500000</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Tier_Silver_Min</fullName>
+        <categories>US-101</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Tier Silver Minimum</shortDescription>
+        <value>50000</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Tier_Update_Failed</fullName>
+        <categories>US-101</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Tier Update Failed</shortDescription>
+        <value>The Customer Tier on the related Account could not be updated:</value>
+    </labels>
+</CustomLabels>
